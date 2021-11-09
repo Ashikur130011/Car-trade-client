@@ -1,0 +1,8 @@
+.banner-body{
+    background-image: url("https://i.ibb.co/pP8fK1w/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    padding-top: 20px;
+}
