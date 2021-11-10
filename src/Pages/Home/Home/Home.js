@@ -1,13 +1,22 @@
-import React from 'react';
-import NavBar from '../../Shared/NavBar/NavBar';
-import Banner from '../Banner/Banner';
-
+import React, { useEffect } from 'react';
+import Products from '../../Products/Products';
+import Navigation from '../../Shared/Navigation/Navigation';
+import HomeBanner from '../HomeBanner/HomeBanner';
 
 const Home = () => {
+    useEffect(()=>{
+        fetch("https://stormy-coast-87051.herokuapp.com/cars")
+        .then(res=>res.json()).then(data=>{
+            console.log(data);
+        })
+    },[])
     return (
         <div>
-            <NavBar></NavBar>
-            <Banner></Banner>
+            <Navigation></Navigation>
+            <HomeBanner></HomeBanner>
+            <Products/>
+
+
         </div>
     );
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Explore = () => {
+const PayLink = () => {
     return (
         <div>
-            <h2>Explore More</h2>
+            <h1>PayLink</h1>
         </div>
     );
 };
 
-export default Explore;
+export default PayLink;
