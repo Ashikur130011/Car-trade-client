@@ -1,15 +1,21 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hook/useAuth';
 import logo from "../../../images/logo.png";
 
 const Navigation = () => {
+  const {user, logOut} = useAuth();
     return (
       <div>
         <Navbar collapseOnSelect expand="lg" bg="light" sticky="top">
           <>
             <Link to="/">
-              <img style={{ width: 180, paddingLeft:"15px" }} src={logo} alt="logo" />
+              <img
+                style={{ width: 180, paddingLeft: "15px" }}
+                src={logo}
+                alt="logo"
+              />
             </Link>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Collapse className="justify-content-end">
@@ -22,6 +28,26 @@ const Navigation = () => {
               <Nav.Link as={Link} to="/contact" className="fw-bold text-black">
                 Contact
               </Nav.Link>
+              <Navbar.Text className="fw-bold text-success">
+                {user?.displayName}
+              </Navbar.Text>
+              
+              <div>
+                {user?.email ? (
+                  <Button
+                    className="bg-danger border-3 border-success text-white rounded-pill"
+                    onClick={logOut}
+                    variant="success"
+                  >
+                    <span className="p-1 fw-bold">Log Out</span>
+                  </Button>
+                ) : (
+                  <Nav.Link as={Link} to="/login">
+                    <span className="text-dark fw-bold">Log In</span>
+                  </Nav.Link>
+                )}
+              </div>{" "}
+             
             </Navbar.Collapse>
           </>
         </Navbar>

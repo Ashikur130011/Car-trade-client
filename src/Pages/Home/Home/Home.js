@@ -12,7 +12,6 @@ const Home = () => {
     },[])
     return (
         <div>
-            <Navigation></Navigation>
             <HomeBanner></HomeBanner>
             <Products/>
 

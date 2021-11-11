@@ -14,9 +14,9 @@ const Products = () => {
         });
     }, []);
     return (
-        <div className="container">
+        <div className="container my-5">
             
-            <Row xs={1} sm={2} md={3} className="g-4">
+            <Row xs={1} sm={2} md={2} className="g-4">
                 {
                     products.slice(0, 6).map(product=> <Product
                     key = {product._id}
