@@ -14,10 +14,12 @@ const HomeBanner = () => {
                 label="Works with selects"
               >
                 <Form.Select aria-label="Floating label select example">
-                  <option>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option>Open this for brand menu</option>
+                  <option value="1">Mercedies</option>
+                  <option value="2">Audi</option>
+                  <option value="4">BMW</option>
+                  <option value="5">Porche</option>
+                  <option value="6">Range Rover</option>
                 </Form.Select>
               </FloatingLabel>
             </div>
@@ -27,10 +29,8 @@ const HomeBanner = () => {
                 label="Works with selects"
               >
                 <Form.Select aria-label="Floating label select example">
-                  <option>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option>Open this for model select</option>
+                  <input type="text" name="model" />
                 </Form.Select>
               </FloatingLabel>
             </div>

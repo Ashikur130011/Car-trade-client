@@ -10,6 +10,9 @@ import AuthProvider from './Context/AuthProvider';
 import CarDetails from './Pages/CarDetails/CarDetails';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
+import AddProduct from './Pages/Dashboard/Admin/AddProduct/AddProduct';
+import ManageProduct from './Pages/Dashboard/Admin/ManageProduct/ManageProduct';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 
 
 function App() {
@@ -34,11 +37,22 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
+
             <Route path="/orders">
               <MyOrders></MyOrders>
             </Route>
+            <Route path="/addProduct">
+              <AddProduct></AddProduct>
+            </Route>
+            <Route path="/manageProduct">
+              <ManageProduct></ManageProduct>
+            </Route>
+
             <PrivateRoute path="/carDetails/:carId">
               <CarDetails></CarDetails>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
             </PrivateRoute>
           </Switch>
         </Router>
