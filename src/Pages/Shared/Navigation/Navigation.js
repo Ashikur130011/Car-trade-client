@@ -35,7 +35,7 @@ const Navigation = () => {
               <div>
                 {user?.email ? (
                   <Button
-                    className="bg-danger border-3 border-success text-white rounded-pill"
+                    className="bg-danger text-white rounded mx-2"
                     onClick={logOut}
                     variant="success"
                   >

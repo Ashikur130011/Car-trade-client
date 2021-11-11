@@ -9,6 +9,7 @@ import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import CarDetails from './Pages/CarDetails/CarDetails';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 
 
 function App() {
@@ -33,9 +34,12 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/carDetails/:carId">
-              <CarDetails></CarDetails>
+            <Route path="/orders">
+              <MyOrders></MyOrders>
             </Route>
+            <PrivateRoute path="/carDetails/:carId">
+              <CarDetails></CarDetails>
+            </PrivateRoute>
           </Switch>
         </Router>
       </AuthProvider>
