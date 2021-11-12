@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import { Button, Table } from 'react-bootstrap';
+import { Button, Spinner, Table } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import useAuth from '../../Hook/useAuth';
 import './CarDetails.css'
@@ -10,6 +10,7 @@ const CarDetails = () => {
     const {carId} = useParams();
     const {register, handleSubmit, reset} = useForm()
     const [product, setProduct] = useState([]);
+    const [loading, isLoading] = useState(true)
     const {user} = useAuth();
     
     console.log(carId);
@@ -48,6 +49,7 @@ const CarDetails = () => {
             <img src={product.img} style={{ width: "100%" }} alt="" />
 
             {/* ----------Order Form----------- */}
+
             <div className="w-75 border border-4 border-danger shadow-lg mx-auto mt-5">
               <h2 className="fw-bold text-danger pt-4">Book Your Dream Car</h2>
               <form
@@ -69,7 +71,7 @@ const CarDetails = () => {
                   type="text"
                   required
                   className="mb-2 fw-bold"
-                  placeholder="Your City"
+                  placeholder="Enter Your City"
                 />
 
                 <input

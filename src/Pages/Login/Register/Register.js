@@ -47,10 +47,14 @@ const Register = () => {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Your Password</Form.Label>
             <Form.Control
+            
               type="password"
               placeholder="Password"
               name="password"
               onBlur={handleOnBlur}
+
+
+
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
