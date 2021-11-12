@@ -7,17 +7,19 @@ const Product = ({product}) => {
     return (
       <div>
         <Card className="pb-3">
-            <Card.Img
-              style={{ height: "15rem" , width:'100%', objectFit:'cover'}}
-              variant="top"
-              src={img}
-            />
+          <Card.Img
+            style={{ height: "15rem", width: "100%", objectFit: "cover" }}
+            variant="top"
+            src={img}
+          />
           <Card.Body>
             <Card.Title className="border-bottom border-3 pb-1">
               Model: {model}
             </Card.Title>
             <Card.Text className="fw-bold mb-0">{Brand}</Card.Text>
-            <Card.Text className="text-start">{description.slice(0, 160)}</Card.Text>
+            <Card.Text className="text-start">
+              {description.slice(0, 160) + " ..."}
+            </Card.Text>
           </Card.Body>
           <div className="">
             <Link to={`/carDetails/${_id}`}>

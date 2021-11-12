@@ -13,6 +13,7 @@ import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import AddProduct from './Pages/Dashboard/Admin/AddProduct/AddProduct';
 import ManageProduct from './Pages/Dashboard/Admin/ManageProduct/ManageProduct';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Footer from './Pages/Shared/Footer/Footer';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
               <Dashboard></Dashboard>
             </PrivateRoute>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

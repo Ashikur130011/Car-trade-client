@@ -32,9 +32,9 @@ const MyOrders = () => {
          });
      };
     return (
-      <div className="container">
+      <div className="">
         <h1>My Orders</h1>
-        <Table striped bordered hover variant="primary">
+        <Table responsive striped bordered hover variant="primary">
           <thead>
             <tr>
               <th>Name</th>
@@ -54,7 +54,9 @@ const MyOrders = () => {
                 <td>{order.Date}</td>
                 <td>{order.price}</td>
                 <td>
-                  <Button onClick={()=>bookingCancel(order._id)}>Cancel</Button>
+                  <Button onClick={() => bookingCancel(order._id)}>
+                    Cancel
+                  </Button>
                 </td>
               </tr>
             </tbody>

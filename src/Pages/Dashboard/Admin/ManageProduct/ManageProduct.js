@@ -33,8 +33,8 @@ const ManageProduct = () => {
     };
 
     return (
-      <div className="container">
-        <Table striped bordered hover variant="primary">
+      <div className="">
+        <Table responsive striped bordered hover variant="primary">
           <thead>
             <tr>
               <th>Car Model</th>

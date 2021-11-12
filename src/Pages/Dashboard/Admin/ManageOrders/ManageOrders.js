@@ -32,9 +32,9 @@ const ManageOrders = () => {
       });
   };
   return (
-    <div className="container">
+    <div className="">
       <h1>All Orders</h1>
-      <Table striped bordered hover variant="primary">
+      <Table responsive striped bordered hover variant="primary">
         <thead>
           <tr>
             <th>Name</th>

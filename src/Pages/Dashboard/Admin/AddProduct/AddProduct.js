@@ -54,6 +54,8 @@ const AddProduct = () => {
                   placeholder="Add rating here"
                   className="w-75"
                   type="number"
+                  max="5"
+                  min="1"
                 />
 
                 <h5 className="fw-bold text-danger">Price</h5>

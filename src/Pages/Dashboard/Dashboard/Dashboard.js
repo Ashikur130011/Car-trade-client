@@ -14,69 +14,94 @@ import './DashBoard.css'
 
 const Dashboard = () => {
   let { path, url } = useRouteMatch();
-  const { admin, logOut } = useAuth();
+  const { admin, logOut, user } = useAuth();
     return (
-      <div className="container">
+      <div className="container my-4">
         <div className="row">
           <div className="col-md-2 dashboard-link">
-            <Link
-              style={{ textDecoration: "none", textAlign: "left" }}
-              to={`${url}`}
-            >
-              <h5>My Order</h5>
-            </Link>
-            <Link
-              style={{ textDecoration: "none", textAlign: "left" }}
-              to={`${url}/review`}
-            >
-              <h5>Review</h5>
-            </Link>
-            <Link
-              style={{ textDecoration: "none", textAlign: "left" }}
-              to={`${url}/paylink`}
-            >
-              <h5>Pay Link</h5>
-            </Link>
+            <div className="">
+              <h5>{user.displayName}</h5>
+              <h6>{user.email}</h6>
+            </div>
+            <div>
+              {!admin && (
+                <>
+                  <Link
+                    style={{ textDecoration: "none", textAlign: "left" }}
+                    to={`${url}`}
+                  >
+                    <h5>
+                      <i className="fas fa-tasks"></i> My Order
+                    </h5>
+                  </Link>
+                  <Link
+                    style={{ textDecoration: "none", textAlign: "left" }}
+                    to={`${url}/review`}
+                  >
+                    <h5>
+                      <i className="far fa-list-alt"></i> Review
+                    </h5>
+                  </Link>
+                  <Link
+                    style={{ textDecoration: "none", textAlign: "left" }}
+                    to={`${url}/paylink`}
+                  >
+                    <h5>
+                      <i className="fab fa-cc-amazon-pay"></i> Pay Link
+                    </h5>
+                  </Link>
+                </>
+              )}
 
-            {admin && (
-              <>
-                <Link
-                  style={{ textDecoration: "none", textAlign: "left" }}
-                  to={`${url}/addProduct`}
-                >
-                  <h5>Add a Product</h5>
-                </Link>
-                <Link
-                  style={{ textDecoration: "none", textAlign: "left" }}
-                  to={`${url}/manageProduct`}
-                >
-                  <h5>Manage Product</h5>
-                </Link>
-                <Link
-                  style={{ textDecoration: "none", textAlign: "left" }}
-                  to={`${url}/makeAdmin`}
-                >
-                  <h5>Make Admin</h5>
-                </Link>
-                <Link
-                  style={{ textDecoration: "none", textAlign: "left" }}
-                  to={`${url}/manageOrders`}
-                >
-                  <h5>Manage All Orders</h5>
-                </Link>
-              </>
-            )}
-
+              {admin && (
+                <>
+                  <Link
+                    style={{ textDecoration: "none", textAlign: "left" }}
+                    to={`${url}/addProduct`}
+                  >
+                    <h5>
+                      <i className="far fa-calendar-plus "></i> Add a Product
+                    </h5>
+                  </Link>
+                  <Link
+                    style={{ textDecoration: "none", textAlign: "left" }}
+                    to={`${url}/manageProduct`}
+                  >
+                    <h5>
+                      <i className="fas fa-cog "></i> Manage Product
+                    </h5>
+                  </Link>
+                  <Link
+                    style={{ textDecoration: "none", textAlign: "left" }}
+                    to={`${url}/makeAdmin`}
+                  >
+                    <h5>
+                      <i className="fas fa-user-check"></i> Make Admin
+                    </h5>
+                  </Link>
+                  <Link
+                    style={{ textDecoration: "none", textAlign: "left" }}
+                    to={`${url}/manageOrders`}
+                  >
+                    <h5>
+                      <i className="fas fa-cogs "></i> Manage All Orders
+                    </h5>
+                  </Link>
+                </>
+              )}
+            </div>
             <Button
-              className="bg-danger text-white rounded mx-2"
+              className="bg-danger text-white rounded m-2"
               onClick={logOut}
               variant="success"
             >
-              <span className="p-1 fw-bold">Log Out</span>
+              <span className="p-1 fw-bold ">
+                Log Out <i className="fas fa-sign-out-alt"></i>
+              </span>
             </Button>
           </div>
 
-          <div className="col-md-10">
+          <div className="col-md-10 my-4">
             <Switch>
               <Route exact path={path}>
                 <MyOrders></MyOrders>

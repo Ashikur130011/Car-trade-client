@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Products from '../../Products/Products';
 import Navigation from '../../Shared/Navigation/Navigation';
+import CustomerReview from '../CustomerReview/CustomerReview';
 import HomeBanner from '../HomeBanner/HomeBanner';
 
 const Home = () => {
@@ -11,12 +12,11 @@ const Home = () => {
         })
     },[])
     return (
-        <div>
-            <HomeBanner></HomeBanner>
-            <Products/>
-
-
-        </div>
+      <div>
+        <HomeBanner></HomeBanner>
+        <Products />
+        <CustomerReview></CustomerReview>
+      </div>
     );
 };
 

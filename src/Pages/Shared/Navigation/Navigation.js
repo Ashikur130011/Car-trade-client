@@ -7,12 +7,12 @@ import logo from "../../../images/logo.png";
 const Navigation = () => {
   const {user, logOut} = useAuth();
     return (
-      <div>
+      <div className="">
         <Navbar collapseOnSelect expand="lg" bg="light" sticky="top">
           <>
             <Link to="/">
               <img
-                style={{ width: 180, paddingLeft: "15px" }}
+                style={{ width: 180, paddingLeft: "20px" }}
                 src={logo}
                 alt="logo"
               />
@@ -25,7 +25,11 @@ const Navigation = () => {
               <Nav.Link as={Link} to="/explore" className="fw-bold text-black">
                 Explore
               </Nav.Link>
-              <Nav.Link as={Link} to="/dashboard" className="fw-bold text-black">
+              <Nav.Link
+                as={Link}
+                to="/dashboard"
+                className="fw-bold text-black"
+              >
                 Dashboard
               </Nav.Link>
               <Nav.Link as={Link} to="/contact" className="fw-bold text-black">
@@ -34,11 +38,19 @@ const Navigation = () => {
               <Navbar.Text className="fw-bold text-success">
                 {user?.displayName}
               </Navbar.Text>
-              
+              <div>
+                {user.email && (
+                  <img
+                    src={user?.photoURL}
+                    alt=""
+                    className="login-user-img d-none d-lg-block rounded-circle mx-auto"
+                  />
+                )}
+              </div>
               <div>
                 {user?.email ? (
                   <Button
-                    className="bg-danger text-white rounded mx-2"
+                    className="bg-danger text-white rounded mx-3"
                     onClick={logOut}
                     variant="success"
                   >
@@ -50,7 +62,6 @@ const Navigation = () => {
                   </Nav.Link>
                 )}
               </div>{" "}
-             
             </Navbar.Collapse>
           </>
         </Navbar>
