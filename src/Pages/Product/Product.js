@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './Product.css'
 
 const Product = ({product}) => {
-    const{_id, model, Brand, img, description, price, rating}= product;
+    const{_id, model, Brand, img, description, rating}= product;
     return (
       <div className=" pro_card">
         <Card className="pb-3">

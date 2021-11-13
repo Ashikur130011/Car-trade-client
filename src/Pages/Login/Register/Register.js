@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Alert, Button, Form, NavLink, Spinner } from "react-bootstrap";
+import { Alert, Button, Form, NavLink } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth";
 
 const Register = () => {
   const [loginData, setLogInData] = useState({});
-  const {registerUser, isLoading, user, authError} = useAuth();
+  const {registerUser, user, authError} = useAuth();
   const history = useHistory()
 
   const handleOnBlur = (e) => {
@@ -25,7 +25,6 @@ const Register = () => {
   return (
     <div className="container">
       <h1>Register</h1>
-      {!isLoading && (
         <Form onSubmit={handleLoginSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Your Name</Form.Label>
@@ -72,13 +71,11 @@ const Register = () => {
               ALREADY HAVE AN ACCOUNT? PLEASE LOGIN HERE
             </Button>
           </NavLink>
-          {isLoading && <Spinner animation="border" variant="danger" />}
           {user?.email && (
             <Alert variant="success">User created Succesfully !</Alert>
           )}
           {authError && <Alert variant="success">{authError}</Alert>}
         </Form>
-      )}
     </div>
   );
 };

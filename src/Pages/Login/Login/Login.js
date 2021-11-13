@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Alert, Button, Form, NavLink, Spinner } from 'react-bootstrap';
+import { Alert, Button, Form, NavLink } from 'react-bootstrap';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hook/useAuth';
 
 const Login = () => {
     const [loginData, setLogInData] = useState({})
-    const { logInUser, isLoading, user, authError } = useAuth();
+    const { logInUser, user, authError } = useAuth();
     const location = useLocation();
     const history = useHistory();
 
@@ -23,7 +23,6 @@ const Login = () => {
     return (
       <div className="container">
         <h1>Login</h1>
-        {!isLoading && (
           <Form onSubmit={handleLoginSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -53,8 +52,6 @@ const Login = () => {
             </NavLink>
             
           </Form>
-        )}
-        {isLoading && <Spinner animation="border" variant="danger" />}
         {user?.email && (
           <Alert variant="success">Logged in Succesfully !</Alert>
         )}

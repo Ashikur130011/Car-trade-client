@@ -6,9 +6,6 @@ import {
   signOut,
   onAuthStateChanged,
   signInWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
-  getIdToken,
   updateProfile,
 } from "firebase/auth";
 
@@ -24,11 +21,11 @@ console.log(admin);
     const registerUser = (email, password, name, history) => {
       setIsLoading(true);
       createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
+        .then((result) => {
           // Signed in
           setAuthError("");
-          const newUser = { email, displayName: name };
-          setUser(newUser);
+          // const newUser = { email, displayName: name };
+          setUser(result.user);
           // save user to database
           saveUser(email, name, "POST");
 
@@ -50,10 +47,11 @@ console.log(admin);
     const logInUser = (email, password, history, location) => {
       setIsLoading(true);
       signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
+        .then((result) => {
           const destination = location?.state?.from || "/";
           history.replace(destination);
           // Signed in
+          setUser(result.user)
           setAuthError("");
           // ...
         })
@@ -77,7 +75,7 @@ console.log(admin);
         setIsLoading(false);
       });
       return () => unsubscribe;
-    }, []);
+    }, [auth]);
     
     //set admin
     useEffect( () => {
@@ -106,6 +104,7 @@ console.log(admin);
       signOut(auth)
         .then(() => {
           // Sign-out successful.
+          setUser({})
         })
         .catch((error) => {
           // An error happened.
