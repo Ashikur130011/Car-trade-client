@@ -4,7 +4,7 @@ const PayLink = () => {
     return (
       <div>
         <h1>Payment system</h1>
-        <img style={{width:"400px"}} src={Come} alt="" />
+        <img style={{width:"100%"}} src={Come} alt="" />
       </div>
     );
 };
