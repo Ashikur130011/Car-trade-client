@@ -1,7 +1,7 @@
 # CarTrade (A Online Car Showroom)
 We are a multi-channel auto platform with coverage and presence across vehicle types and value-added services. Our platforms operate under several brands: CarWale, CarTrade, Shriram Automall, BikeWale, CarTradeExchange, Adroit Auto and AutoBiz. Through these platforms,we enable new and used automobile customers, vehicle dealerships,vehicle OEMs and other businesses to buy and sell their vehicles in a simple and efficient manner. Our vision is to create an automotive digital ecosystem which connects automobile customers, OEMs,dealers, banks, insurance companies and other stakeholders.
 
-## Live Site Link: https://car-trade-2c750.web.app/dashboard
+## Live Site Link: https://car-trade-2c750.web.app/
 
 ## Benefits of buying car from us:-
 ### 1. Quality vehicles – zero accidents
