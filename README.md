@@ -1,32 +1,38 @@
-# Getting Started with Create React App
+# CarTrade (A Online Car Showroom)
+We are a multi-channel auto platform with coverage and presence across vehicle types and value-added services. Our platforms operate under several brands: CarWale, CarTrade, Shriram Automall, BikeWale, CarTradeExchange, Adroit Auto and AutoBiz. Through these platforms,we enable new and used automobile customers, vehicle dealerships,vehicle OEMs and other businesses to buy and sell their vehicles in a simple and efficient manner. Our vision is to create an automotive digital ecosystem which connects automobile customers, OEMs,dealers, banks, insurance companies and other stakeholders.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Site Link: https://car-trade-2c750.web.app/dashboard
 
-## Available Scripts
+## Benefits of buying car from us:-
+### 1. Quality vehicles – zero accidents
+ -Our techs test drive each car that comes through the shop, to verify engine performance, steering and those all-important brakes.
 
-In the project directory, you can run:
+### 2. Virtual test drive
+ -Our technologically advanced 360 degree vehicle tours not only let you spin that car right round baby right round, you can also hop right inside
 
-### `yarn start`
+### 3. Qualify online, save time
+ -At Carooga our technology allows you to submit your pre-qualification form in 2 minutes. That’s not an exaggeration. You enter 12 fields and we calculate your personalized terms.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 4. Best price promise
+ -We offer our single, best price upfront, no different from you walking into the grocery store and plucking something off the shelf.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 5. Delivered to your door
+ -Our vehicle delivery service is fast, free, super friendly, totally reliable and right to your driveway. 
 
-###To make this site use--
-React js
-React bootstrap
-React router
-Vanilla Css
-Bootstrap
-Context Api
-Firebase
-MongoDB Atlas
-Node js
-Express
-React Hook Form
+### 6. 7 day risk-free test drive
+ -If it is within 7 days and you are not in love with your new ride, simply exchange or return it. No questions asked. 
+
+
+### Materials for made this site--
+React js,
+React bootstrap,
+React router,
+Vanilla Css,
+Bootstrap,
+Context Api,
+Firebase,
+MongoDB Atlas,
+Node js,
+Express,
+React Hook Form,
 Heroku
-Tools-
-Uses Browser - Chrome Browser
-Uses IDE- Visual Studio Code

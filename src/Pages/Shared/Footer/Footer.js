@@ -9,8 +9,8 @@ import { FormControl, InputGroup } from 'react-bootstrap';
 const Footer = () => {
     return (
       <div>
-        <div className="bg-secondary px-5">
-          <div className="row w-75 mx-auto">
+        <div className="bg-secondary border border-danger border-2 px-5">
+          <div className="row w-75 p-5 mx-auto">
             <div className="col-md-3 my-3">
               <img src={IMG1} alt="" />
             </div>
@@ -45,14 +45,14 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 text-white">
+            <div className="col-md-3 text-white text-start">
               <h3 className="text-black fw-bold">OUR COMPANY</h3>
-              <h6>About us</h6>
-              <h6>Term of us</h6>
-              <h6>Contact Us</h6>
-              <h6>Our Services</h6>
+              <h6 className=" fw-bold">Term of us</h6>
+              <h6 className=" fw-bold">Contact Us</h6>
+              <h6 className=" fw-bold">About us</h6>
+              <h6 className=" fw-bold">Our Services</h6>
             </div>
-            <div className="col-md-3 text-white">
+            <div className="col-md-3 text-white text-start">
               <h3 className="text-black fw-bold">OPEN HOURS</h3>
               <h5>Sales Department</h5>
               <h6>
