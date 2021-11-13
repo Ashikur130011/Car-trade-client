@@ -22,7 +22,7 @@ const CustomerReview = () => {
         <h1 className="border-2 border-bottom w-25 mx-auto pt-3 fw-bold">
           Customer <span className="text-danger">Review</span>
         </h1>
-        <Carousel className="caro_width w-50 mx-auto pt-3 mb-5">
+        <Carousel className="caro_width mx-auto pt-3 mb-5">
           {comments.map((comment) => (
             <Carousel.Item className="" interval={2000} key={comment?._id}>
               <img className="w-100" src={Img} alt="Slider img" />
@@ -42,7 +42,7 @@ const CustomerReview = () => {
                     fullSymbol="fas fa-star"
                   />
                   <div>
-                    <p className="w-75 mx-auto">{comment.comment}</p>
+                    <p className="w-75 text-warning mx-auto">{comment.comment.slice(0,40) + "..."}</p>
                   </div>
                 </Carousel.Caption>
               </div>
