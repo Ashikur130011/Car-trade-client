@@ -65,10 +65,10 @@ const CarDetails = () => {
                 <div>
                   <Rating
                     className="mb-3 text-warning"
-                    initialRating={product.rating}
+                    initialRating={parseFloat(product.rating)}
                     readonly
-                    emptySymbol="fa fa-star"
-                    fullSymbol="fa fa-star"
+                    emptySymbol="far fa-star"
+                    fullSymbol="fas fa-star"
                   />
                 </div>
               </div>

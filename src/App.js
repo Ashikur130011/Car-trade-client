@@ -12,6 +12,7 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Footer from './Pages/Shared/Footer/Footer';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </Router>

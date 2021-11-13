@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
   const [spinner, setSpinner] = useState(true);
   const [getStatus, setGetStatus] = useState("");
-  const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState({})
   const { user } = useAuth();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const ManageOrders = () => {
 
   const handleStatusSubmit = (id) => {
     const values = { getStatus };
-    console.log(values);
+    // console.log(values);
     fetch(`https://stormy-coast-87051.herokuapp.com/orders/${id}`, {
       method: "PUT",
       headers: {
@@ -38,7 +38,7 @@ const ManageOrders = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setSuccess(true);
+        setSuccess(data);
       });
   };
 
@@ -56,8 +56,10 @@ const ManageOrders = () => {
   };
   return (
     <div className="">
-      <h1>All Orders</h1>
-      {success && <Alert variant="success">Order cancelled !</Alert>}
+      {/* <h1>All Orders</h1>
+      {success.status === "Approve"&& <Alert variant="success">Order Approved !</Alert>}
+      {success.status === "Cancel"&& <Alert variant="success">Order Canceled !</Alert>} */}
+    {success.status && <Alert variant="success"> Order {success.status}! </Alert>}
       <Table responsive striped bordered hover variant="primary">
         <thead>
           <tr>

@@ -4,6 +4,8 @@ import IMG2 from '../../../images/footer_carwale.png'
 import IMG3 from '../../../images/footer_ct.png'
 import IMG4 from '../../../images/mobility-logo.png'
 import logo from '../../../images/logo.png'
+import play from '../../../images/play.png'
+import app from '../../../images/app.png'
 import { FormControl, InputGroup } from 'react-bootstrap';
 
 const Footer = () => {
@@ -80,14 +82,15 @@ const Footer = () => {
 
               <i className="fab fa-facebook fs-3 mx-2 text-warning"></i>
               <i className="fab fa-twitter fs-3 mx-2 text-warning"></i>
-              <i className="fab fa-google-plus-g fs-3 mx-2 text-warning"></i>
+              <i className="fab fa-google-plus-g fs-3 mx-2 text-warning"></i><br />
+                <img className=" w-50" src={play} alt="" /> <br />
+                <img className=" w-50" src={app} alt="" />
             </div>
           </div>
         </div>
         <div className="bg-black">
           <p className="text-danger fw-bold m-0 ">
-            Designed by Ashikur Rahman{" "}
-            <i className="far fa-copyright mx-2 text-danger"></i>2021
+            Designed by Ashikur Rahman<i className="far fa-copyright mx-2 text-danger"></i>2021
           </p>
         </div>
       </div>

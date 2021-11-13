@@ -20,10 +20,10 @@ const Product = ({product}) => {
             </Card.Title>
             <Rating
               className=" text-warning"
-              initialRating={rating}
+              initialRating={parseFloat(rating)}
               readonly
-              emptySymbol="fa fa-star"
-              fullSymbol="fa fa-star"
+              emptySymbol="far fa-star"
+              fullSymbol="fas fa-star"
             />
             <Card.Text className="fw-bold fs-3 text-danger mb-0">
               <i className="fas fa-car"></i> {Brand}
