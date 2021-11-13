@@ -4,7 +4,7 @@ import Product from '../Product/Product';
 
 const ExploreMore = () => {
     const [products, setProducts] = useState([]);
-    console.log(products);
+    // console.log(products);
     useEffect(() => {
       fetch("https://stormy-coast-87051.herokuapp.com/cars")
         .then((res) => res.json())

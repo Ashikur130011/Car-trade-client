@@ -8,9 +8,6 @@ import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import CarDetails from './Pages/CarDetails/CarDetails';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
-import AddProduct from './Pages/Dashboard/Admin/AddProduct/AddProduct';
-import ManageProduct from './Pages/Dashboard/Admin/ManageProduct/ManageProduct';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Footer from './Pages/Shared/Footer/Footer';
 import About from './Pages/About/About';
@@ -22,7 +19,7 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-            <Navigation></Navigation>
+          <Navigation></Navigation>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -30,32 +27,22 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/explore">
-              <ExploreMore></ExploreMore>
-            </PrivateRoute>
+
             <Route path="/login">
               <Login></Login>
             </Route>
             <Route path="/register">
               <Register></Register>
             </Route>
+            <PrivateRoute path="/explore">
+              <ExploreMore></ExploreMore>
+            </PrivateRoute>
             <Route path="/about">
               <About></About>
             </Route>
             <Route path="/contact">
               <Contact></Contact>
             </Route>
-
-            <Route path="/orders">
-              <MyOrders></MyOrders>
-            </Route>
-            <Route path="/addProduct">
-              <AddProduct></AddProduct>
-            </Route>
-            <Route path="/manageProduct">
-              <ManageProduct></ManageProduct>
-            </Route>
-
             <PrivateRoute path="/carDetails/:carId">
               <CarDetails></CarDetails>
             </PrivateRoute>
