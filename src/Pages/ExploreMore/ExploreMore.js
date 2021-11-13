@@ -17,6 +17,10 @@ const ExploreMore = () => {
     return (
       <div>
         <div className="container my-5">
+          <h1 className="text-start border-bottom border-2 border-danger mb-2">
+            {" "}
+            Our <span className="text-danger">Features</span> Car
+          </h1>
           <Row xs={1} sm={2} md={3} className="g-3">
             {products.map((product) => (
               <Product key={product._id} product={product}></Product>

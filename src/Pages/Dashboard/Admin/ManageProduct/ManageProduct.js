@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Table } from 'react-bootstrap';
+import { Button, Form, Table } from 'react-bootstrap';
 import useAuth from '../../../../Hook/useAuth';
 
 const ManageProduct = () => {
     const [products, setProducts] = useState([]);
     const [spinner, setSpinner] = useState(true);
+    
+
     const { user } = useAuth();
 
     useEffect(() => {
@@ -19,21 +21,25 @@ const ManageProduct = () => {
     }, [user.email]);
     console.log(products);
 
-    const orderCancel = (id) => {
-      console.log(id);
-      axios
-        .delete(`https://stormy-coast-87051.herokuapp.com/cars/${id}`)
-        .then((res) => {
-          if (res.data.deletedCount === 1) {
-            const restItem = products.filter((event) => event._id !== id);
-            setProducts(restItem);
-            alert("Are you sure?");
-          }
-        });
-    };
+
+  
+
+  const orderCancel = (id) => {
+    console.log(id);
+    axios
+      .delete(`https://stormy-coast-87051.herokuapp.com/cars/${id}`)
+      .then((res) => {
+        if (res.data.deletedCount === 1) {
+          const restItem = products.filter((event) => event._id !== id);
+          setProducts(restItem);
+          alert("Are you sure?");
+        }
+      });
+  };
 
     return (
       <div className="">
+        <h1>Manage Products</h1>
         <Table responsive striped bordered hover variant="primary">
           <thead>
             <tr>

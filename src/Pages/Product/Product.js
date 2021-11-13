@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+import './Product.css'
 
 const Product = ({product}) => {
     const{_id, model, Brand, img, description, price, rating}= product;
     return (
-      <div>
+      <div className=" pro_card">
         <Card className="pb-3">
           <Card.Img
             style={{ height: "15rem", width: "100%", objectFit: "cover" }}
@@ -16,7 +18,16 @@ const Product = ({product}) => {
             <Card.Title className="border-bottom border-3 pb-1">
               Model: {model}
             </Card.Title>
-            <Card.Text className="fw-bold mb-0">{Brand}</Card.Text>
+            <Rating
+              className=" text-warning"
+              initialRating={rating}
+              readonly
+              emptySymbol="fa fa-star"
+              fullSymbol="fa fa-star"
+            />
+            <Card.Text className="fw-bold fs-3 text-danger mb-0">
+              <i className="fas fa-car"></i> {Brand}
+            </Card.Text>
             <Card.Text className="text-start">
               {description.slice(0, 160) + " ..."}
             </Card.Text>
@@ -27,7 +38,7 @@ const Product = ({product}) => {
                 variant="primary"
                 className="bg-primary  text-white rounded px-4"
               >
-                Check Availability
+                Check Availability <i className="fas fa-arrow-circle-right"></i>
               </Button>
             </Link>
           </div>

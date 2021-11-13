@@ -3,6 +3,7 @@ import Products from '../../Products/Products';
 import Navigation from '../../Shared/Navigation/Navigation';
 import CustomerReview from '../CustomerReview/CustomerReview';
 import HomeBanner from '../HomeBanner/HomeBanner';
+import Popular from '../Popular/Popular';
 
 const Home = () => {
     useEffect(()=>{
@@ -16,6 +17,7 @@ const Home = () => {
         <HomeBanner></HomeBanner>
         <Products />
         <CustomerReview></CustomerReview>
+        <Popular></Popular>
       </div>
     );
 };

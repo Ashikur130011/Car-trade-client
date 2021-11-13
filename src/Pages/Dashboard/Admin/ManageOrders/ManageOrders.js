@@ -1,11 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Button, Table } from "react-bootstrap";
+import { Alert, Button, Form, Table } from "react-bootstrap";
 import useAuth from "../../../../Hook/useAuth";
 
 const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
   const [spinner, setSpinner] = useState(true);
+  const [getStatus, setGetStatus] = useState("");
+  const [success, setSuccess] = useState(false)
   const { user } = useAuth();
 
   useEffect(() => {
@@ -17,9 +19,30 @@ const ManageOrders = () => {
         setSpinner(false);
       });
   }, [user.email]);
-  console.log(orders);
+  //console.log(orders);
 
-  const bookingCancel = (id) => {
+  const handleStatus = (e) => {
+    setGetStatus(e.target.value);
+  };
+
+  const handleStatusSubmit = (id) => {
+    const values = { getStatus };
+    console.log(values);
+    fetch(`https://stormy-coast-87051.herokuapp.com/orders/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setSuccess(true);
+      });
+  };
+
+  const orderCancel = (id) => {
     console.log(id);
     axios
       .delete(`https://stormy-coast-87051.herokuapp.com/orders/${id}`)
@@ -34,14 +57,15 @@ const ManageOrders = () => {
   return (
     <div className="">
       <h1>All Orders</h1>
+      {success && <Alert variant="success">Order cancelled !</Alert>}
       <Table responsive striped bordered hover variant="primary">
         <thead>
           <tr>
             <th>Name</th>
             <th>Car Model</th>
-            <th>Car Brand</th>
             <th>Order Date</th>
             <th>price</th>
+            <th>Status</th>
             <th>Cancel Order</th>
           </tr>
         </thead>
@@ -50,11 +74,26 @@ const ManageOrders = () => {
             <tr>
               <td>{order.Name}</td>
               <td>{order.model}</td>
-              <td>{order.brand}</td>
               <td>{order.Date}</td>
               <td>{order.price}</td>
+              <td className="d-flex">
+                <Form.Select
+                  onChange={handleStatus}
+                  className="w-50 mx-auto"
+                  aria-label="Default select example"
+                >
+                  <option>{order.status}</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Approve">Approve</option>
+                  <option value="Cancel">Cancel</option>
+                </Form.Select>
+
+                <button onClick={() => handleStatusSubmit(order._id)}>
+                  <i className="far fa-check-square"></i>
+                </button>
+              </td>
               <td>
-                <Button onClick={() => bookingCancel(order._id)}>Cancel</Button>
+                <Button onClick={() => orderCancel(order._id)}>Cancel</Button>
               </td>
             </tr>
           </tbody>

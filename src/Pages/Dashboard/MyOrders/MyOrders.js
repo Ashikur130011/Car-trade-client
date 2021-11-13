@@ -32,7 +32,7 @@ const MyOrders = () => {
          });
      };
     return (
-      <div className="">
+      <div className="w-75 mx-auto">
         <h1>My Orders</h1>
         <Table responsive striped bordered hover variant="primary">
           <thead>
@@ -41,7 +41,7 @@ const MyOrders = () => {
               <th>Car Model</th>
               <th>Car Brand</th>
               <th>Order Date</th>
-              <th>price</th>
+              <th>Status</th>
               <th>Cancel Order</th>
             </tr>
           </thead>
@@ -49,10 +49,10 @@ const MyOrders = () => {
             <tbody key={index}>
               <tr>
                 <td>{order.Name}</td>
-                <td>{order.model}</td>
+                <td className="fw-bold">{order.model}</td>
                 <td>{order.brand}</td>
                 <td>{order.Date}</td>
-                <td>{order.price}</td>
+                <td className="fw-bold">{order.status}</td>
                 <td>
                   <Button onClick={() => bookingCancel(order._id)}>
                     Cancel

@@ -1,0 +1,5 @@
+.pro_card :hover{
+    background-color: rgb(4, 73, 73);
+    color: rgb(243, 243, 12);
+    font-weight: bold;
+}

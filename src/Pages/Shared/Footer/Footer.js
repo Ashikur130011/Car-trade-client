@@ -4,6 +4,7 @@ import IMG2 from '../../../images/footer_carwale.png'
 import IMG3 from '../../../images/footer_ct.png'
 import IMG4 from '../../../images/mobility-logo.png'
 import logo from '../../../images/logo.png'
+import { FormControl, InputGroup } from 'react-bootstrap';
 
 const Footer = () => {
     return (
@@ -25,13 +26,23 @@ const Footer = () => {
           </div>
           <div className="row">
             <div className="col-md-3 text-white">
-              <div>
+              <div className="mx-4">
                 <img src={logo} alt="" />
-                <p>
-                  Our vision is to create an automotive digital ecosystem which
-                  connects automobile customers, OEMs, dealers, banks, insurance
-                  companies and other stakeholders.
-                </p>
+                <p>Our vision is to create an automotive digital ecosystem.</p>
+                <div>
+                  <p className="text-start mb-0">
+                    <i className="far fa-address-card text-warning"></i> 760 Dane
+                    Street, Millwood, Washington
+                  </p>
+                  <p className="text-start mb-0">
+                    <i className="fas fa-globe-asia text-warning"></i> text-black
+                    United States
+                  </p>
+                  <p className="text-start">
+                    <i className="fas fa-phone-volume text-warning"></i>{" "}
+                    509-290-3895
+                  </p>
+                </div>
               </div>
             </div>
             <div className="col-md-3 text-white">
@@ -57,7 +68,16 @@ const Footer = () => {
               <h6>Sunday is Closed</h6>
             </div>
             <div className="col-md-3 text-white">
-              <h3 className="text-black fw-bold">Subscribe Us</h3>
+              <h3 className="text-black fw-bold">SUBSCRIBE US</h3>
+              <InputGroup className="mb-3">
+                <FormControl
+                  placeholder="Your email"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <InputGroup.Text id="basic-addon2">send</InputGroup.Text>
+              </InputGroup>
+
               <i className="fab fa-facebook fs-3 mx-2 text-warning"></i>
               <i className="fab fa-twitter fs-3 mx-2 text-warning"></i>
               <i className="fab fa-google-plus-g fs-3 mx-2 text-warning"></i>

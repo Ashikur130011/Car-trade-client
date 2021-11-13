@@ -19,7 +19,7 @@ const Review = () => {
      };
 
     return (
-      <div className="container py-5">
+      <div className="container py-5 w-75 mx-auto">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="border border-3 border-dark shadow-md p-4"

@@ -19,7 +19,10 @@ const CustomerReview = () => {
     }, []);
     return (
       <div>
-        <Carousel className="caro_width w-50 mx-auto mb-5">
+        <h1 className="border-2 border-bottom w-25 mx-auto pt-3 fw-bold">
+          Customer <span className="text-danger">Review</span>
+        </h1>
+        <Carousel className="caro_width w-50 mx-auto pt-3 mb-5">
           {comments.map((comment) => (
             <Carousel.Item className="" interval={2000} key={comment?._id}>
               <img className="w-100" src={Img} alt="Slider img" />

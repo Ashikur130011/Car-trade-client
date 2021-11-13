@@ -14,6 +14,8 @@ import AddProduct from './Pages/Dashboard/Admin/AddProduct/AddProduct';
 import ManageProduct from './Pages/Dashboard/Admin/ManageProduct/ManageProduct';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Footer from './Pages/Shared/Footer/Footer';
+import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
 
 
 function App() {
@@ -37,6 +39,12 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
             </Route>
 
             <Route path="/orders">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../Hook/useAuth';
 import logo from "../../../images/logo.png";
 
@@ -19,21 +19,56 @@ const Navigation = () => {
             </Link>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Collapse className="justify-content-end">
-              <Nav.Link as={Link} to="/home" className="fw-bold text-black ">
+              <Nav.Link
+                as={NavLink}
+                to="/home"
+                style={(isActive) => ({
+                  color: isActive ? "red" : "black",
+                  fontWeight: "bold",
+                })}
+                //className="fw-bold text-black "
+              >
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/explore" className="fw-bold text-black">
+              <Nav.Link
+                as={NavLink}
+                to="/explore"
+                style={(isActive) => ({
+                  color: isActive ? "red" : "black",
+                  fontWeight: "bold",
+                })}
+              >
                 Explore
               </Nav.Link>
               <Nav.Link
-                as={Link}
+                as={NavLink}
                 to="/dashboard"
-                className="fw-bold text-black"
+                style={(isActive) => ({
+                  color: isActive ? "red" : "black",
+                  fontWeight: "bold",
+                })}
               >
                 Dashboard
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact" className="fw-bold text-black">
+              <Nav.Link
+                as={NavLink}
+                to="/contact"
+                style={(isActive) => ({
+                  color: isActive ? "red" : "black",
+                  fontWeight: "bold",
+                })}
+              >
                 Contact
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                to="/about"
+                style={(isActive) => ({
+                  color: isActive ? "red" : "black",
+                  fontWeight: "bold",
+                })}
+              >
+                About
               </Nav.Link>
               <Navbar.Text className="fw-bold text-success">
                 {user?.displayName}

@@ -28,7 +28,7 @@ const MakeAdmin = () => {
       e.preventDefault();
     };
     return (
-      <div>
+      <div className="w-50 mx-auto">
         <h1>Make a admin</h1>
         <form onSubmit={handleAdminSubmit}>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -44,6 +44,7 @@ const MakeAdmin = () => {
             Success
           </Button>
         </form>
+        <br />
         {success && <Alert variant="success">Admin created Succesfully !</Alert>}
       </div>
     );

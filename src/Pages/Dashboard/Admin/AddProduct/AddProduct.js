@@ -19,7 +19,7 @@ const AddProduct = () => {
     };
     return (
       <div>
-        <div className="container py-5">
+        <div className="w-75 mx-auto py-3">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="border border-3 border-dark shadow-md p-4"
