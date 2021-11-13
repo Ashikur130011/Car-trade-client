@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import Product from '../Product/Product';
-import Navigation from '../Shared/Navigation/Navigation';
 
 const ExploreMore = () => {
     const [products, setProducts] = useState([]);

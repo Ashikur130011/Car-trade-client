@@ -51,11 +51,7 @@ const Login = () => {
                 NEW USER? PLEASE REGISTER
               </Button>
             </NavLink>
-            {isLoading && <Spinner animation="border" variant="danger" />}
-            {user?.email && (
-              <Alert variant="success">Logged in Succesfully !</Alert>
-            )}
-            {authError && <Alert variant="success">{authError}</Alert>}
+            
           </Form>
         )}
         {isLoading && <Spinner animation="border" variant="danger" />}

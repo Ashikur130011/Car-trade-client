@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Button, Form, Table } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import useAuth from '../../../../Hook/useAuth';
 
 const ManageProduct = () => {
