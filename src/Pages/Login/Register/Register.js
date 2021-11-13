@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Alert, Button, Form, NavLink } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth";
 
 const Register = () => {
   const [loginData, setLogInData] = useState({});
   const {registerUser, user, authError} = useAuth();
   const history = useHistory()
-
+  const location=useLocation()
+  const uri = location?.state?.from ||"/";
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -19,7 +20,13 @@ const Register = () => {
     if(loginData.password !== loginData.password1){
         alert('Password did not match')
     }
-    registerUser(loginData.email, loginData.password, loginData.name, history)
+    registerUser(
+      loginData.email,
+      loginData.password,
+      loginData.name,
+      history,
+      uri
+    );
     e.preventDefault();
   };
   return (

@@ -17,15 +17,17 @@ const useFirebase =()=> {
     const [authError, setAuthError] = useState("");
     const [admin, setAdmin] = useState(false)
     const auth = getAuth();
-console.log(admin);
-    const registerUser = (email, password, name, history) => {
+// console.log(admin);
+
+    const registerUser = (email, password, name, history,uri) => {
       setIsLoading(true);
       createUserWithEmailAndPassword(auth, email, password)
         .then((result) => {
+          setUser(result.user);
           // Signed in
           setAuthError("");
           // const newUser = { email, displayName: name };
-          setUser(result.user);
+          
           // save user to database
           saveUser(email, name, "POST");
 
@@ -35,7 +37,7 @@ console.log(admin);
           })
             .then(() => {})
             .catch((error) => {});
-          history.replace("/");
+          history.replace(uri);
         })
         .catch((error) => {
           setAuthError(error.message);
@@ -44,14 +46,14 @@ console.log(admin);
         .finally(() => setIsLoading(false));
     };
 
-    const logInUser = (email, password, history, location) => {
+    const logInUser = (email, password, history, uri) => {
       setIsLoading(true);
       signInWithEmailAndPassword(auth, email, password)
         .then((result) => {
-          const destination = location?.state?.from || "/";
-          history.replace(destination);
+          setUser(result.user);
+          history.replace(uri);
           // Signed in
-          setUser(result.user)
+          
           setAuthError("");
           // ...
         })
@@ -67,8 +69,6 @@ console.log(admin);
       const unsubscribe = onAuthStateChanged(auth, (user) => {
         if (user) {
           setUser(user);
-          
-         
         } else {
           setUser({});
         }

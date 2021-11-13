@@ -8,7 +8,7 @@ const Login = () => {
     const { logInUser, user, authError } = useAuth();
     const location = useLocation();
     const history = useHistory();
-
+const uri =location?.state?.from||"/"
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -17,7 +17,7 @@ const Login = () => {
         setLogInData(newData)
     }
     const handleLoginSubmit = e => {
-        logInUser(loginData.email, loginData.password, history, location)
+        logInUser(loginData.email, loginData.password, history, uri)
         e.preventDefault();
     }
     return (
