@@ -25,7 +25,7 @@ const CustomerReview = () => {
         <Carousel className="caro_width mx-auto pt-3 mb-5">
           {comments.map((comment) => (
             <Carousel.Item className="" interval={2000} key={comment?._id}>
-              <img className="w-100" src={Img} alt="Slider img" />
+              <img className="w-100 img-radius" src={Img} alt="Slider img" />
 
               <div className="caro_border">
                 <Carousel.Caption className="mb-3">

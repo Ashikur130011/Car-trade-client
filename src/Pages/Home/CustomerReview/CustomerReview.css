@@ -1,6 +1,9 @@
 .caro_width{
     width:50%
 }
+.img-radius{
+    border-radius: 30px;
+}
 .carousel-inner{
     border-radius: 30px;
     border: 3px solid red;
