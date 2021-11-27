@@ -3,24 +3,24 @@ We are a multi-channel auto platform with coverage and presence across vehicle t
 
 ## Live Site Link: https://car-trade-2c750.web.app/
 ## CarTrade Overview
-### 1.Developed a full-stack website that allows users to see car details, buy cars, and see all orders after login.
-### 2.Option for Admin to manage products, orders and can update users order status and make a new admin.
-### 3.Form to leave a review for the clients to show on the homepage.
+### 1. Developed a full-stack website that allows users to see car details, buy cars, and see all orders after login.
+### 2. Option for Admin to manage products, orders and can update users order status and make a new admin.
+### 3. Form to leave a review for the clients to show on the homepage.
 
 ## Benefits of buying car from us:-
-### 1. Quality vehicles – zero accidents
+#### 1. Quality vehicles – zero accidents
  -Our techs test drive each car that comes through the shop, to verify engine performance, steering and those all-important brakes.
 
-### 2. Virtual test drive
+#### 2. Virtual test drive
  -Our technologically advanced 360 degree vehicle tours not only let you spin that car right round baby right round, you can also hop right inside
 
-### 3. Qualify online, save time
+#### 3. Qualify online, save time
  -At Carooga our technology allows you to submit your pre-qualification form in 2 minutes. That’s not an exaggeration. You enter 12 fields and we calculate your personalized terms.
 
-### 4. Best price promise
+#### 4. Best price promise
  -We offer our single, best price upfront, no different from you walking into the grocery store and plucking something off the shelf.
 
-### 5. Delivered to your door
+#### 5. Delivered to your door
  -Our vehicle delivery service is fast, free, super friendly, totally reliable and right to your driveway. 
 
 ### 6. 7 day risk-free test drive
