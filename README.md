@@ -23,7 +23,7 @@ We are a multi-channel auto platform with coverage and presence across vehicle t
 #### 5. Delivered to your door
  -Our vehicle delivery service is fast, free, super friendly, totally reliable and right to your driveway. 
 
-### 6. 7 day risk-free test drive
+#### 6. 7 day risk-free test drive
  -If it is within 7 days and you are not in love with your new ride, simply exchange or return it. No questions asked. 
 
 
