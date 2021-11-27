@@ -2,6 +2,10 @@
 We are a multi-channel auto platform with coverage and presence across vehicle types and value-added services. Our platforms operate under several brands: CarWale, CarTrade, Shriram Automall, BikeWale, CarTradeExchange, Adroit Auto and AutoBiz. Through these platforms,we enable new and used automobile customers, vehicle dealerships,vehicle OEMs and other businesses to buy and sell their vehicles in a simple and efficient manner. Our vision is to create an automotive digital ecosystem which connects automobile customers, OEMs,dealers, banks, insurance companies and other stakeholders.
 
 ## Live Site Link: https://car-trade-2c750.web.app/
+## CarTrade Overview
+### 1.Developed a full-stack website that allows users to see car details, buy cars, and see all orders after login.
+### 2.Option for Admin to manage products, orders and can update users order status and make a new admin.
+### 3.Form to leave a review for the clients to show on the homepage.
 
 ## Benefits of buying car from us:-
 ### 1. Quality vehicles – zero accidents
